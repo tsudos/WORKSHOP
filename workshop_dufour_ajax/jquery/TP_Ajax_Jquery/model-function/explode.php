@@ -67,8 +67,12 @@ require('database.fn.php');
 require('faq.fn.php');
 $pdo = getPDO($config); 
 
+$faq=show($pdo);
 
-function ajoutDB(){
+$val1 = $faq[0]['mot'];
+$length2=count($faq);
+
+
 //pb avec 'forme : carré' et 'pâte à modeler' il faudrait que je fasse une condition si entre deux ' il y a des espaces alors on n'enleve pas les espaces
     if (!$fp = fopen("listeMot.txt","r"))
     {echo "Echec de l'ouverture du fichier";}
@@ -84,14 +88,19 @@ function ajoutDB(){
         $i=0;
         while($i<=$length)
         {
-            echo $arraynote3[$i]."<br/>";
+            echo $i.' : '.$arraynote3[$i]."<br/>";
             $i++;
-            //$array = add($pdo, $arraynote3[$i]);
+
+            //tant que la condition n est pas trouvé
+            if (($val1 != $arraynote3[0]) AND (($length+1) !== $length2)) {
+                //echo $val1.'  '.$arraynote3[0].' '.$length.' '.$length2.'<br>';
+                $array = add($pdo, $arraynote3[$i]);
+            }
         }
     }
 
     fclose($fp); 
-}
+
 
 
 
