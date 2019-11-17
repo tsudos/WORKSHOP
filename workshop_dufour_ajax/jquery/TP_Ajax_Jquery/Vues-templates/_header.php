@@ -45,6 +45,6 @@
 <div id="ensemble">
 <h1 class='jumbotron'>WorkShop_Ajax</h1>
 <ul class="list-inline">
-    <li><a href="add_question.php">A</a></li>
-    <li><a href="index1.php">B</a></li>
+    <li><a href="listedemot.php">liste de mot</a></li>
+    <li><a href="suggestion.php">suggestion/ajout</a></li>
 </ul>
