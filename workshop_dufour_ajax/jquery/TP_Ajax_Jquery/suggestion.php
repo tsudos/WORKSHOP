@@ -11,40 +11,26 @@ $pdo = getPDO($config);
 include('Vues-templates/_header.php');
 include('Vues-templates/form/TP-form.php');
 
-//conditions
-/* if (!empty($_POST['recherche'])){
-
+//conditions pour rajouté un mot à la base de donné -> voir apres pr passer en ajax les données dans le fichier listeMot.txt
+ if (!empty($_POST['recherche'])){
     $data = $_POST['recherche'];
-
     if(add($pdo, $data)){
     header("Location: suggestion.php?state=succes");
-    
     }
     else{
-        header("Location: suggestion.php?state=error");
-        
+        header("Location: suggestion.php?state=error");   
     }   
-} */
+} 
+
 
 $tp=show($pdo);
-
-
+//pr voir la liste des mots en direct
 echo '<p>';
 foreach ($tp as $key => $value) {
-
     echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
-
 }
 echo '</p>';
 
 
-
-
-
-
-
-
-
 include('Vues-templates/_footer.php');
-
 ?>
