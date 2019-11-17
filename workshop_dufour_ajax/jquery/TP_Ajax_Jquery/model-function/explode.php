@@ -17,8 +17,6 @@ if (!$fp = fopen("listeMot.txt","r"))
         echo $arraynote3[$i]."<br/>";
         $i++;
     }
-   
-
 }
  fclose($fp); 
 
