@@ -10,8 +10,8 @@ function show(PDO $pdo){
 
 
 //function add(PDO $pdo, array $data) -- ajout des mots nouveau à la liste de la base
-function add(PDO $pdo, array $data){
-    $mot = $pdo->quote($data['mot']);
+function add(PDO $pdo, string $data){
+    $mot = $pdo->quote($data);
     $sql = 'INSERT INTO list(mot) VALUES (:mot)';
     $result = $pdo->prepare($sql);
     return $result->execute(array(

@@ -5,14 +5,16 @@ require('model-function/database.fn.php');
 require('model-function/faq.fn.php');
 $pdo = getPDO($config);
 
+
+
+//mise en page
 include('Vues-templates/_header.php');
 include('Vues-templates/form/faq-form.php');
 
+//conditions
 if (!empty($_POST['recherche'])){
 
-    $data = array(
-        'mot' => $_POST['recherche']
-    );
+    $data = $_POST['recherche'];
 
     if(add($pdo, $data)){
     header("Location: suggestion.php?state=succes");
@@ -20,7 +22,7 @@ if (!empty($_POST['recherche'])){
     }
     else{
         header("Location: suggestion.php?state=error");
-        var_dump($data);
+        console_log($data);
     }   
 }
 
