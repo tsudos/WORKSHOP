@@ -14,11 +14,13 @@ $faq=show($pdo);
 
 <?php
 
+echo '<p>';
 foreach ($faq as $key => $value) {
 
-    echo  '<div id="demo'.$key.'" class="collapse show ">'.nl2br(htmlspecialchars($value['mot'])).'<br><br></div>';
+    echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
 
 }
+echo '</p>';
 
 
 
