@@ -2,14 +2,14 @@
 //sert à l'administation pour afficher de nouvelle Q/R
 require('config.php');
 require('model-function/database.fn.php');
-require('model-function/faq.fn.php');
+require('model-function/TP.fn.php');
 $pdo = getPDO($config);
 
 
 
 //mise en page
 include('Vues-templates/_header.php');
-include('Vues-templates/form/faq-form.php');
+include('Vues-templates/form/TP-form.php');
 
 //conditions
 /* if (!empty($_POST['recherche'])){
@@ -26,11 +26,11 @@ include('Vues-templates/form/faq-form.php');
     }   
 } */
 
-$faq=show($pdo);
+$tp=show($pdo);
 
 
 echo '<p>';
-foreach ($faq as $key => $value) {
+foreach ($tp as $key => $value) {
 
     echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
 

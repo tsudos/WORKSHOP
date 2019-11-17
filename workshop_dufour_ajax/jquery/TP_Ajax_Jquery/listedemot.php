@@ -1,12 +1,12 @@
 <?php
-//sert à afficher la FAQ
+//sert à afficher la liste des mots de la BD
 require('config.php');
 require('model-function/database.fn.php');
-require('model-function/faq.fn.php');
+require('model-function/TP.fn.php');
 $pdo = getPDO($config);
 include('Vues-templates/_header.php');
 
-$faq=show($pdo);
+$tp=show($pdo);
 
 ?>
 
@@ -15,7 +15,7 @@ $faq=show($pdo);
 <?php
 
 echo '<p>';
-foreach ($faq as $key => $value) {
+foreach ($tp as $key => $value) {
 
     echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
 

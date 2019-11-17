@@ -1,4 +1,4 @@
-<!--html du formulaire d’ajout de questions faq-->
+<!--html du formulaire de verification de l'autocomplétion-->
 
 <!--attention action-->
 
