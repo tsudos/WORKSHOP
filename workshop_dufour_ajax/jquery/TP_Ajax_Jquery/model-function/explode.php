@@ -1,4 +1,4 @@
-<!--différents templates HTML-->
+<!--seulement si on veux rajouté la liste dans la base de donnée-->
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
@@ -77,6 +77,7 @@ $length2=count($tp);
     if (!$fp = fopen("listeMot.txt","r"))
     {echo "Echec de l'ouverture du fichier";}
     else {
+        //on enleve les / ' et espaces pour généré un tableau de donnée (explode)
         $contenu = fread($fp, 3000);
         $arraynote1 = explode('\'', $contenu );
         $arrayimplode = implode($arraynote1);
@@ -84,12 +85,13 @@ $length2=count($tp);
         $arrayimplode2 = implode($arraynote2);
         $arraynote3 = explode(' ', $arrayimplode2);
 
+        //taille du tableau a partir de zero
         $length= count($arraynote3)-1;
         $i=0;
         while($i<=$length)
         {
             //affiche les mots dans la base
-            echo $arraynote3[$i]."<br/>";
+            echo  nl2br(htmlspecialchars($arraynote3[$i])).' / ';
             
             //des que la condition est trouvé on ne rajoute pas dans la base
             if (($val1 != $arraynote3[0]) AND (($length+1) !== $length2)) {
