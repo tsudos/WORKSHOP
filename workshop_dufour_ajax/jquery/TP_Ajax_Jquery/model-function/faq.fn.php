@@ -14,9 +14,7 @@ function add(PDO $pdo, string $data){
     $mot = $pdo->quote($data);
     $sql = 'INSERT INTO list(mot) VALUES (:mot)';
     $result = $pdo->prepare($sql);
-    return $result->execute(array(
-        ':mot'=> $mot
-    ));
+    return $result->execute(array(':mot'=> $mot));
 }
 
 ?>

@@ -22,9 +22,23 @@ if (!empty($_POST['recherche'])){
     }
     else{
         header("Location: suggestion.php?state=error");
-        console_log($data);
+        
     }   
 }
+
+$faq=show($pdo);
+
+
+echo '<p>';
+foreach ($faq as $key => $value) {
+
+    echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
+
+}
+echo '</p>';
+
+
+
 
 
 

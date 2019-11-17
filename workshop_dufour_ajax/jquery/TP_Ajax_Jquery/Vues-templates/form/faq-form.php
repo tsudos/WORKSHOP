@@ -3,14 +3,14 @@
 <!--attention action-->
 
         <div class="form-group">
-            <form name="suggestions" method="POST" action="#">
+            <form name="suggestions" method="POST" action="suggestion.php">
                 <fieldset>
                     <legend>suggestions</legend>
                         <p>
                             <input type="text" name="recherche" class="form-control" id="chercher" placeholder="tapez une lettre !"/>
                         </p>
                         <p>
-                            <input type="submit" name="chercher" value="chercher"/>
+                            <button type="submit" name="chercher" class="btn btn-info ">Chercher</button>
                         </P>        
                 </fieldset>
             </form>
