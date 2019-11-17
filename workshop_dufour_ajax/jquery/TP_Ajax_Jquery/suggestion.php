@@ -12,7 +12,7 @@ include('Vues-templates/_header.php');
 include('Vues-templates/form/faq-form.php');
 
 //conditions
-if (!empty($_POST['recherche'])){
+/* if (!empty($_POST['recherche'])){
 
     $data = $_POST['recherche'];
 
@@ -24,7 +24,7 @@ if (!empty($_POST['recherche'])){
         header("Location: suggestion.php?state=error");
         
     }   
-}
+} */
 
 $faq=show($pdo);
 

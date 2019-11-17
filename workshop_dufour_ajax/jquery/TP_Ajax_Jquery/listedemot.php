@@ -22,12 +22,5 @@ foreach ($faq as $key => $value) {
 }
 echo '</p>';
 
-
-
-
-
-//include('Vues-templates/form/faq-form.php');
 include('Vues-templates/_footer.php');
-
-
 ?>
