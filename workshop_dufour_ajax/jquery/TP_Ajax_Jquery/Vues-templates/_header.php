@@ -51,11 +51,5 @@
 <ul class="list-inline">
     <li><a href="listedemot.php">liste de mot</a></li>
     <li><a href="suggestion.php">suggestion</a></li>
-    <li><a href="model-function/explode.php">ajout de la liste de départ pour la base de donnée : </a>
-        <ul>
-            <li class ="list">->base de donnée dans mySQL : db_autocomp.</li>
-            <li class ="list">->table de la base de donnée : liste.</li>
-            <li class ="list">->colonnes de la table : id, mot.</li>
-        </ul>
-    </li>
+    <li><a href="model-function/explode.php">ajout de la liste de départ pour la base de donnée (1ere connection)</a></li>
 </ul>
