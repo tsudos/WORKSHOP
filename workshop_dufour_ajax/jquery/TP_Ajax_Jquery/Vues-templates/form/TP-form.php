@@ -6,7 +6,7 @@
             <form name="suggestions" method="POST" action="suggestion.php">
                 <fieldset>
                     <legend>suggestions</legend>
-                        <p>
+                        <p id="box">
                             <input type="text" name="recherche" class="form-control" id="chercher" placeholder="tapez une lettre !"/>
                         </p>
                         <p>
