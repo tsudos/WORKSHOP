@@ -9,8 +9,8 @@
 <!--script pour lautocompletion-->
 <script type="application/javascript"> 
 $(function(){  
-$("#auto").on('input', function() { 
-  $("#auto").autocomplete({source: 'autocomplete.php', minLength : 2}); 
+$("#results").on('input', function() { 
+  $("#results").autocomplete({source: 'autocomplete.php', minLength : 2}); 
   }); 
 });   
 </script>

@@ -8,7 +8,6 @@
                     <legend>suggestions</legend>
                         <p id="box">
                             <input type="text" name="recherche" class="form-control" id="auto" autocomplete="on"/>
-                        
                         </p>
                         <div id="results">
                         </div>
