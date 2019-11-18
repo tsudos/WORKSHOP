@@ -3,6 +3,7 @@
 require('config.php');
 require('model-function/database.fn.php');
 require('model-function/TP.fn.php');
+require('model-function/autocomplete.php');
 $pdo = getPDO($config);
 
 
@@ -22,14 +23,14 @@ include('Vues-templates/form/TP-form.php');
     }   
 }  */
 
-
-$tp=show($pdo);
+//pour voir la liste de mot
+/* $tp=show($pdo);
 //pr voir la liste des mots en direct
 echo '<p>';
 foreach ($tp as $key => $value) {
     echo  ' \''.nl2br(htmlspecialchars($value['mot'])).'\',';
 }
-echo '</p>';
+echo '</p>'; */
 
 
 include('Vues-templates/_footer.php');
